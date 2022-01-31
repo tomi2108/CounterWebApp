@@ -16,13 +16,21 @@ function reset(id) {
   arr[id - 1] = 0;
   document.getElementById("counter" + id).innerText = arr[id - 1];
 }
-function resetAll() {
-  for (let i = 0; i < arr.length; i++) {
-    arr[i] = 0;
-    if (!(i in removed)) {
-      document.getElementById("counter" + (i + 1)).innerText = 0;
+
+function isInArr(i, removed) {
+  for (let j = 0; j < removed.length; j++) {
+    if (removed[j] == i) {
+      return true;
     }
-    arrCount = 0;
+  }
+  return false;
+}
+function resetAll() {
+  for (let i = 1; i < arr.length + 1; i++) {
+    if (!isInArr(i, removed)) {
+      arr[i - 1] = 0;
+      document.getElementById("counter" + i).innerText = 0;
+    }
   }
 }
 
