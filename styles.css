@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  text-decoration: underline;
+  background: lightblue;
+}
+#counters {
+  background: rgb(80, 79, 79);
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+.add-counter-btn {
+  position: absolute;
+  background-color: darkgray;
+  height: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+.counter-card {
+  position: relative;
+  background: lightslategrey;
+  width: 200px;
+  aspect-ratio: 1;
+  margin: 20px;
+  top: 40px;
+  float: left;
+  user-select: none;
+  border-radius: 8%;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.counter {
+  position: absolute;
+  display: inline-block;
+  background: black;
+  color: white;
+  width: 80px;
+  aspect-ratio: 1;
+  top: 60px;
+  left: 60px;
+  margin: auto auto;
+  text-align: center;
+  border: solid white 2px;
+  line-height: 65px;
+  font-size: 1rem;
+  border-radius: 50%;
+}
+.increment-btn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background-color: darkgray;
+  height: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.increment-btn:active,
+.add-counter-btn:active {
+  transform: scale(0.9);
+}
