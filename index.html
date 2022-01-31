@@ -10,12 +10,19 @@
   </head>
   <body>
     <h1>Counter app</h1>
-    <div class="add-counter-btn" onclick="add_html_counter()">Add counter</div>
+    <div class="btn" onclick="addHtmlCounter()">Add counter</div>
+    <div class="btn" style="left: 100px" onclick="resetAll()">Reset all</div>
     <div id="counters">
-      <div class="counter-card">
-        <h2>Counter number <span class="counter-number">1</span></h2>
+      <div id="counter-card1" class="counter-card">
+        <div class="close btn" onclick="removeHtmlCounter(1)">X</div>
+        <h2>
+          Counter number
+          <span id="titleCounter1" class="counter-number">1</span>
+        </h2>
         <h3 id="counter1" class="counter">0</h3>
-        <div class="increment-btn" onclick="increment(1)">Increment</div>
+        <div class="reset btn" onclick="reset(1)">Reset</div>
+        <div class="increment btn" onclick="increment(1)">Increment</div>
+        <div class="decrement btn" onclick="decrement(1)">Decrement</div>
       </div>
     </div>
   </body>
